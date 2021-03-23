@@ -1,25 +1,33 @@
-import logo from './logo.svg';
+import React from 'react'
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+
+	inputField = () => {
+		return (
+			<label htmlFor="content">
+				<input type="text" id="content" className="input-field" name="content" />
+			</label>
+		)
+	}
+
+	renderedText = () => {
+		return (
+			<h1>Text Goes Here</h1>
+		)
+	}
+
+	render() {
+
+		return (
+			<main className="main-container">
+				{this.renderedText()}
+				{this.inputField()}
+			</main>
+		)
+
+	}
 }
 
 export default App;
