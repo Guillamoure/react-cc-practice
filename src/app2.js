@@ -18,7 +18,7 @@ class App extends React.Component {
 
 		return (
 			<main className="main-container2">
-				{this.state.arrayOfPeople.map(person => <PersonCard person={person} />)}
+				No Content Yet!
 			</main>
 		)
 
